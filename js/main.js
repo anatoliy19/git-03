@@ -1,24 +1,6 @@
 $(document).ready(function() {
 
-	// Возвращение даты
-	var getDate = function() {
-		var d = new Date(),
-				day = d.getDate(),
-				hrs = d.getHours(),
-				min = d.getMinutes(),
-				//sec = d.getSeconds(),
-				month = d.getMonth(),
-				year = d.getFullYear();
-
-		var monthArray = new Array("января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря");
-
-		//if (day <= 9) day "0" + day; 
-
-		//var actualDate = day + ' ' + monthArray[month] + ' ' + year + ' г.,' + hrs + ' :' + min;
-		var actualDate = `${day} ${monthArray[month]} ${year}, ${hrs}:${min}`;
-		return actualDate;
-	};
-
+	
 	// Подсчет твитов
 	var countTweets = function() {
 		var tweetCounter = $('.tweet-card').length;
